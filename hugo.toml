@@ -1,4 +1,4 @@
-baseURL = 'https://agents4j.github.io/'
+baseURL = 'https://agents4j.github.io/agents4j-site/'
 languageCode = 'en-us'
 title = 'Agents4J: An agent framework for Java'
 [module]
