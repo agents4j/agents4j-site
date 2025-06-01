@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://agents4j.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Agents4J: An agent framework for Java'
 [module]
 proxy = "direct"
 [[module.imports]]
