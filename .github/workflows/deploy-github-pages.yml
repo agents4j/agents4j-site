@@ -40,9 +40,13 @@ jobs:
       - run: npm ci
       - run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        if: ${{ github.ref == 'refs/heads/main' }} # <-- specify same branch as above here
+      - name: Copy files to GitHub Pages
+        uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          url: ${{ steps.deployment.outputs.page_url }}
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   if: ${{ github.ref == 'refs/heads/main' }} # <-- specify same branch as above here
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
