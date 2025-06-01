@@ -87,7 +87,7 @@ jobs:
     environment:
       name: github-pages
       # url: ${{ steps.deployment.outputs.page_url }}
-      url: $URL
+      url: https://agents4j.github.io/
     runs-on: ubuntu-latest
     needs: build
     steps:
