@@ -1,5 +1,8 @@
 name: Deployment to GitHub Pages
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   push:
@@ -42,4 +45,5 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }} # <-- specify same branch as above here
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
 
